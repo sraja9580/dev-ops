@@ -328,9 +328,10 @@ Pipeline
   ## Docker
   	Launch an ec2 instance.and install docker in it.
 		yum install docker
-* Pull Docker Image *<br>
-	`docker pull imagaeName`
-* Run Docker container *<br>
+* Pull Docker Image <br>
+```	docker pull imagaeName
+```
+* Run Docker container <br>
 ```
 	docker run imageName
 	docker run -i -d -t -p 70:80 nginx
@@ -339,12 +340,12 @@ Pipeline
 	t - opens teriminal
 	p - 70:80 (expose container port 80 in host machine 70, nginx default port is 80)
 ```
-* List Docker running containers *<br>
+* List Docker running containers <br>
 ```
 	docker ps
 	docker ps -a (included non running container)
 ```
-* Delete Docker Imager and Container *<br>
+* Delete Docker Imager and Container <br>
 ```
 	docker rm containerId -> container
 	docker rm -f containerId ->deleting running container	
