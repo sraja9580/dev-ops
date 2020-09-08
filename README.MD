@@ -388,4 +388,12 @@ Pipeline
 ![docker_history](/images/docker/docker_history.PNG) <br>
 ![docker-containers](/images/docker/docker-containers.PNG) <br>
 ![docker-image-folder](/images/docker/docker-image-folder.PNG) <br>
+
+* Docker Container Creation with Environment Variable
+```	
+	docker run -dit -p 6036:3306 --env="MYSQL_ROOT_PASSWORD=test" --env="MYSQL_DATABASE=rajapractice" mysql
+	env is used to set environment variables
+	here we are setting root password and requesting to create default databse rajapractice
+```
+
 		
