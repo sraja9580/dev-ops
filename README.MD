@@ -354,4 +354,12 @@ Pipeline
 	docker rmi imageName -> image
 	
 ```
+* Stop Start Pause Unpase
+```
+	docker start 6ad8b8306
+	docker stop 6ad8b83060c3
+	docker pause 6ad8b83060c3
+	docker unpause 6ad8b83060c3	
+```
+
 		
