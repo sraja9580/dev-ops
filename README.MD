@@ -324,3 +324,19 @@ Pipeline
 		spring.datasource.password=raja9580
 		#Elastic Bean Stack
 		server.port = 5000
+		
+  ## Docker
+  	Launch an ec2 instance.and install docker in it.
+		yum install docker
+	*Pull Docker Image*
+		docker pull imagaeName
+	*Run Docker container*
+		docker run imageName
+	*List Docker running containers*
+		docker ps
+		docker ps -a (included non running container)
+	*Delete Docker Imager and Container*
+		docker rm containerId -> container
+		docker rm -f containerId ->deleting running container
+		docker rmi imageName -> image
+		
