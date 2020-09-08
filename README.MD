@@ -365,6 +365,7 @@ Pipeline
 ```
 	docker exec -it a8b98b29759 bash
 	once you are inside container you can cd into folders, you can instal software etc
+	docker exec -it -u 0 a8b98b297593 bash -> as ROOT user
 	 
 ```
 
