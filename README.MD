@@ -361,5 +361,11 @@ Pipeline
 	docker pause 6ad8b83060c3
 	docker unpause 6ad8b83060c3	
 ```
+* Get inside container
+```
+	docker exec -it a8b98b29759 bash
+	once you are inside container you can cd into folders, you can instal software etc
+	 
+```
 
 		
