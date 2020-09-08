@@ -328,15 +328,20 @@ Pipeline
   ## Docker
   	Launch an ec2 instance.and install docker in it.
 		yum install docker
-	*Pull Docker Image*
-		docker pull imagaeName
-	*Run Docker container*
-		docker run imageName
-	*List Docker running containers*
-		docker ps
-		docker ps -a (included non running container)
-	*Delete Docker Imager and Container*
-		docker rm containerId -> container
-		docker rm -f containerId ->deleting running container
-		docker rmi imageName -> image
+*Pull Docker Image*
+	docker pull imagaeName
+*Run Docker container*
+	docker run imageName
+	docker run -i -d -t -p 70:80 nginx
+	i - intractive mode
+	d - detached mode
+	t - opens teriminal
+	p - 70:80 (expose container port 80 in host machine 70, nginx default port is 80)
+*List Docker running containers*
+	docker ps
+	docker ps -a (included non running container)
+*Delete Docker Imager and Container*
+	docker rm containerId -> container
+	docker rm -f containerId ->deleting running container
+	docker rmi imageName -> image
 		
