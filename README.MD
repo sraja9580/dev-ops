@@ -331,12 +331,14 @@ Pipeline
 * Pull Docker Image *<br>
 	`docker pull imagaeName`
 * Run Docker container *<br>
-	`docker run imageName
+```
+	docker run imageName
 	docker run -i -d -t -p 70:80 nginx
 	i - intractive mode
 	d - detached mode
 	t - opens teriminal
-	p - 70:80 (expose container port 80 in host machine 70, nginx default port is 80)`
+	p - 70:80 (expose container port 80 in host machine 70, nginx default port is 80)
+```
 * List Docker running containers *<br>
 	`docker ps
 	docker ps -a (included non running container)`
