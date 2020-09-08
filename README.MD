@@ -378,4 +378,11 @@ Pipeline
 	docker history cd14cecfdb3a
 	tells the each layer history and when it is added to the final image
 ```
+* Docker Layers
+	By using **docker info** command you get the docker director
+	Docker Root Dir: /var/lib/docker -> this is where images stored, containers run, and image repo infos
+```	
+	docker history cd14cecfdb3a
+	tells the each layer history and when it is added to the final image
+```
 		
