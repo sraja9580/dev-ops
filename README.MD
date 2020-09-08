@@ -329,7 +329,9 @@ Pipeline
   	Launch an ec2 instance.and install docker in it.
 		yum install docker
 * Pull Docker Image <br>
-```	docker pull imagaeName
+```	
+	docker pull imagaeName
+
 ```
 * Run Docker container <br>
 ```
