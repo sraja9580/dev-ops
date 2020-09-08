@@ -340,10 +340,15 @@ Pipeline
 	p - 70:80 (expose container port 80 in host machine 70, nginx default port is 80)
 ```
 * List Docker running containers *<br>
-	`docker ps
-	docker ps -a (included non running container)`
+```
+	docker ps
+	docker ps -a (included non running container)
+```
 * Delete Docker Imager and Container *<br>
-	`docker rm containerId -> container
-	docker rm -f containerId ->deleting running container
-	docker rmi imageName -> image`
+```
+	docker rm containerId -> container
+	docker rm -f containerId ->deleting running container	
+	docker rmi imageName -> image
+	
+```
 		
