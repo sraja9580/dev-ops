@@ -368,5 +368,8 @@ Pipeline
 	docker exec -it -u 0 a8b98b297593 bash -> as ROOT user
 	 
 ```
-
+* Docker image from running container using COMMIT
+```
+	 docker commit a8b98b297593 jenkis-git-image	 
+```
 		
