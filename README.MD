@@ -369,7 +369,13 @@ Pipeline
 	 
 ```
 * Docker image from running container using COMMIT
+	_this is not preferred way.Docker File is the best practice to create image_
 ```
-	 docker commit a8b98b297593 jenkis-git-image	 
+	 docker commit a8b98b297593 jenkis-git-image		 
+```
+* Docker Image history
+```	
+	docker history cd14cecfdb3a
+	tells the each layer history and when it is added to the final image
 ```
 		
