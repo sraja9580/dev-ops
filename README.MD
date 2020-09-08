@@ -385,4 +385,7 @@ Pipeline
 	docker history cd14cecfdb3a
 	tells the each layer history and when it is added to the final image
 ```
+![docker_history](/images/docker/docker_history.PNG) <br>
+![docker-containers](/images/docker/docker-containers.PNG) <br>
+![docker-image-folder](/images/docker/docker-image-folder.PNG) <br>
 		
