@@ -347,7 +347,7 @@ Pipeline
 	docker ps
 	docker ps -a (included non running container)
 ```
-* Delete Docker Imager and Container <br>
+* Delete Docker Image and Container <br>
 ```
 	docker rm containerId -> container
 	docker rm -f containerId ->deleting running container	
@@ -368,7 +368,7 @@ Pipeline
 	docker exec -it -u 0 a8b98b297593 bash -> as ROOT user
 	 
 ```
-* Docker image from running container using COMMIT
+* Docker image from running container using COMMIT <br>
 	_this is not preferred way.Docker File is the best practice to create image_
 ```
 	 docker commit a8b98b297593 jenkis-git-image		 
