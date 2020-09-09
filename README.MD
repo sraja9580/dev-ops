@@ -409,5 +409,5 @@ Pipeline
 	docker run -dit -p 8060:8080 --mount source=9580_volume,destination=/var jenkin
 ```
 	now if you go and check volume folder inside host docker directory you can see all jenkins directory<br>
-	![docker_volumer_container_data_in_host](/images/docker/docker_volumer_container_data_in_host.PNG) <br>
+![docker_volumer_container_data_in_host](/images/docker/docker_volumer_container_data_in_host.PNG)
 		
