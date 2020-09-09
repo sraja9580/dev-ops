@@ -389,11 +389,25 @@ Pipeline
 ![docker-containers](/images/docker/docker-containers.PNG) <br>
 ![docker-image-folder](/images/docker/docker-image-folder.PNG) <br>
 
-* Docker Container Creation with Environment Variable
+* **Docker Container Creation with Environment Variable**
 ```	
 	docker run -dit -p 6036:3306 --env="MYSQL_ROOT_PASSWORD=test" --env="MYSQL_DATABASE=rajapractice" mysql
 	env is used to set environment variables
 	here we are setting root password and requesting to create default databse rajapractice
 ```
+![docker_exec_db_container_sql_commands](/images/docker/docker_exec_db_container_sql_commands.PNG) <br>
 
+* **Docker VOLUMES**<br>
+	Volumes helps to store data in host instead of container, so data can be retained even if the container crashed.<br>
+	We need volumed if we use Jenkins,MySQL of if we store any files in our app space.<br>
+```	
+	CREATE
+	docker volume create 9580_volume
+	LIST
+	docker volume ls
+	MOUNT
+	docker run -dit -p 8060:8080 --mount source=9580_volume,destination=/var jenkin
+```
+	now if you go and check volume folder inside host docker directory you can see all jenkins directory<br>
+	![docker_volumer_container_data_in_host](/images/docker/docker_volumer_container_data_in_host.PNG) <br>
 		
