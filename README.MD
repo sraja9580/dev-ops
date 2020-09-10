@@ -410,4 +410,16 @@ Pipeline
 ```
 	now if you go and check volume folder inside host docker directory you can see all jenkins directory<br>
 ![docker_volumer_container_data_in_host](/images/docker/docker_volumer_container_data_in_host.PNG)
-		
+
+* **Docker Networks**<br>
+```	
+	LIST
+	docker network ls
+	Get the details of existing network
+	docker network inspect bridge ->
+		*IP range in the network - subnet
+		*Container attached to the network etc
+```
+![docker-network-list](/images/docker/docker-network-list.PNG)
+![docker-network-inspect](/images/docker/docker-network-inspect.PNG)
+
