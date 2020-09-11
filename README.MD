@@ -413,12 +413,22 @@ Pipeline
 
 * **Docker Networks**<br>
 ```	
-	LIST
-	docker network ls
-	Get the details of existing network
-	docker network inspect bridge ->
+	docker network ls	
+	
+	docker network inspect bridge -> Get the details of existing network
 		*IP range in the network - subnet
 		*Container attached to the network etc
+		
+	docker network create 9580
+	docker network create 9580-with-IP --subnet 172.19.0.0/16
+	
+	#RUN CONATAINEW WITH SPECIFIC NETWORK
+	docker run --net 9580 -d -p 8080:8080 jenkins
+	docker run --net 9580-with-IP --ip 172.19.0.5 -h jenkins.raja.com -d -p 8080:8080 jenkins
+	
+	#CHANGE CONTAINER NETWORK
+	docker network disconnect 9580-with-IP 26a4f3befa26  --> Disconnect from current network
+	docker network connect 9580-with-IP 26a4f3befa26     --> Connect to New Network
 ```
 ![docker-network-list](/images/docker/docker-network-list.PNG)
 ![docker-network-inspect](/images/docker/docker-network-inspect.PNG)
