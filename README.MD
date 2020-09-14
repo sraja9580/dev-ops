@@ -366,7 +366,7 @@ Pipeline
 	docker exec -it a8b98b29759 bash
 	once you are inside container you can cd into folders, you can instal software etc
 	docker exec -it -u 0 a8b98b297593 bash -> as ROOT user
-	 
+	docker attache a8b98b297593 -> attaches currant command line to a running container	 
 ```
 * **Docker image from running container using COMMIT** <br>
 	_this is not preferred way.Docker File is the best practice to create image_
@@ -449,7 +449,7 @@ Pipeline
 	PUSHING DOCKER FILE TO HUB
 	--------------------------
 	docker login (provide user id and pwd in command prompt)
-	docker push raja9580/hello-world-rest:dockerfile
+	docker push raja9580/hello-world-rest:0.0.1-SNAPSHOT
 	
 ```
 	
