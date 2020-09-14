@@ -333,7 +333,7 @@ Pipeline
 	docker pull imagaeName
 
 ```
-* Run Docker container <br>
+* **Run Docker container** <br>
 ```
 	docker run imageName
 	docker run -i -d -t -p 70:80 nginx
@@ -342,43 +342,43 @@ Pipeline
 	t - opens teriminal
 	p - 70:80 (expose container port 80 in host machine 70, nginx default port is 80)
 ```
-* List Docker running containers <br>
+* **List Docker running containers** <br>
 ```
 	docker ps
 	docker ps -a (included non running container)
 ```
-* Delete Docker Image and Container <br>
+* **Delete Docker Image and Container** <br>
 ```
 	docker rm containerId -> container
 	docker rm -f containerId ->deleting running container	
 	docker rmi imageName -> image
 	
 ```
-* Stop Start Pause Unpase
+* **Stop Start Pause Unpase**
 ```
 	docker start 6ad8b8306
 	docker stop 6ad8b83060c3
 	docker pause 6ad8b83060c3
 	docker unpause 6ad8b83060c3	
 ```
-* Get inside container
+* **Get inside container**
 ```
 	docker exec -it a8b98b29759 bash
 	once you are inside container you can cd into folders, you can instal software etc
 	docker exec -it -u 0 a8b98b297593 bash -> as ROOT user
 	 
 ```
-* Docker image from running container using COMMIT <br>
+* **Docker image from running container using COMMIT** <br>
 	_this is not preferred way.Docker File is the best practice to create image_
 ```
 	 docker commit a8b98b297593 jenkis-git-image		 
 ```
-* Docker Image history
+* **Docker Image history**
 ```	
 	docker history cd14cecfdb3a
 	tells the each layer history and when it is added to the final image
 ```
-* Docker Layers <br>
+* ***Docker Layers** <br>
 	By using **docker info** command you get the docker director<br>
 	Docker Root Dir: /var/lib/docker -> this is where images stored, containers run, and image repo infos<br>
 ```	
@@ -432,4 +432,27 @@ Pipeline
 ```
 ![docker-network-list](/images/docker/docker-network-list.PNG)
 ![docker-network-inspect](/images/docker/docker-network-inspect.PNG)
+
+* **Docker File- ImageBuild and Push to docker hub**<br>
+```
+	Docker File:
+	------------
+		FROM openjdk:8-jdk-alpine	
+		ADD target/hello-world-rest-api.jar hello-world-rest-api.jar
+		ENTRYPOINT ["sh", "-c", "java -jar /hello-world-rest-api.jar"]
+		
+	Build Image
+	-----------
+		docker build -t repo/imagename:taganame . (use . in case if you are running the build from same dir as docker file dir, otherwiser use directory instead .)
+	  	docker build -t raja9580/hello-world-rest:0.0.1-SNAPSHOT .
+		
+	PUSHING DOCKER FILE TO HUB
+	--------------------------
+	docker login (provide user id and pwd in command prompt)
+	docker push raja9580/hello-world-rest:dockerfile
+	
+```
+	
+	
+
 
