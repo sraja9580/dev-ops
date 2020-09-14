@@ -452,6 +452,14 @@ Pipeline
 	docker push raja9580/hello-world-rest:0.0.1-SNAPSHOT
 	
 ```
+* **Docker PRUNE**<br>
+	_docker prune remove all stopped containers, prune command can be used against container ,image ,volume, docker system etc <br> instead of removivng one by one we can use prune remove everything.We have to be careful when using prune because it deletes everything
+
+```
+	docker container prune
+	docker image prune
+	docker volume prune
+```
 	
 	
 
