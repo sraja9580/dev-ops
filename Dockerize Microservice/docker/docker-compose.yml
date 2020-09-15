@@ -1,0 +1,17 @@
+version: '3.3'
+services:	
+    coupon:
+        ports:
+            - '1001:8070'
+        container_name: coupon-service
+        image: raja9580/coupon:0.0.1-SNAPSHOT
+        depends_on: mysql
+	mysql:
+        ports:
+            - '1000:3306'
+        environment:
+            - 'true'
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=raja_practice
+        container_name: 9580-mysql-docker
+        image: mysql        
