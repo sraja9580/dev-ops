@@ -465,7 +465,11 @@ Pipeline
 
 ## Docker-Compose
 	With docker-compose we can manage multiple container together,bringdown,bringup everything.If a application has more than one services they can be managed using docker-compose.
-	
+### Install Docker compose
+* sudo curl -L https://github.com/docker/compose/releases/download/1.27.2/docker-compose-Linux-x86_64 -o /usr/bin/docker-compose
+* sudo chmod +x /usr/bin/docker-compose
+* docker-compose version -> verify status
+
 * docker manages single container
 * docker-compose manages multiple container applications
 	
