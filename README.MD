@@ -328,7 +328,9 @@ Pipeline
   ## Docker
   	Launch an ec2 instance.and install docker in it.
 		yum install docker
-* Pull Docker Image <br>
+* [Docker Compose](#docker-compose)
+
+* **Pull Docker Image** <br>
 ```	
 	docker pull imagaeName
 
@@ -460,6 +462,12 @@ Pipeline
 	docker image prune
 	docker volume prune
 ```
+
+## Docker-Compose
+	With docker-compose we can manage multiple container together,bringdown,bringup everything.If a application has more than one services they can be managed using docker-compose.
+	
+* docker manages single container
+* docker-compose manages multiple container applications
 	
 	
 
